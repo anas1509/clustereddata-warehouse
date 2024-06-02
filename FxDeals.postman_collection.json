@@ -1,0 +1,132 @@
+{
+	"info": {
+		"_postman_id": "8d166822-34fe-48b5-a768-fea31d4e287f",
+		"name": "FxDeals",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19653299"
+	},
+	"item": [
+		{
+			"name": "getDealByUuid",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "text"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fxDeals/service/getDealByUuid?uuid=123e4567-e89b-12d3-a456-426614174683",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fxDeals",
+						"service",
+						"getDealByUuid"
+					],
+					"query": [
+						{
+							"key": "uuid",
+							"value": "123e4567-e89b-12d3-a456-426614174683"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "saveDeal",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"id\": null,\r\n  \"uuid\": \"123e4567-e89b-12d3-a456-426614174689\",\r\n  \"fromCurrencyIsoCode\": \"USDO\",\r\n  \"toCurrencyIsoCode\": \"USD\",\r\n  \"dealTimestamp\": \"2023-06-01T12:00:00\",\r\n  \"amount\": 234.50,\r\n  \"creationDate\": null,\r\n  \"updateDate\": null\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fxDeals/service/saveDeal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fxDeals",
+						"service",
+						"saveDeal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllDeals",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/fxDeals/service/getAllDeals",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fxDeals",
+						"service",
+						"getAllDeals"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "keep-alive",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/fxDeals/keep-alive",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fxDeals",
+						"keep-alive"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
